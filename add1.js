@@ -8,3 +8,9 @@ module.exports = {
     return total;
   },
 };
+
+/**
+ * Here the number of operations depends of 'n'
+ * so we have n assigments, and n additions, and n comparisions, and ....
+ * Counting operations is hard, but always be proportional to n
+ */
