@@ -19,7 +19,7 @@ f(n) = fn(n^2) = quadratic
 # What does better mean?
 
 - faster?
-- less memory-intesive?
+- less memory-intesive? <<-- focus on this
 - more readable?
 
 # counting operations
@@ -45,3 +45,12 @@ and so on
 2. Variable assigments is constant
 3. accessing elements in an array (by index) or object (by key) is constant
 4. in a loop, the complexity is the length of the loop times the complexity of whatever happens inside of the loop
+
+# Space Complexity
+Space of memory used only taking into account the algorithm
+
+## Rules of Thumb
+
+- Most primitives (booleans, numbers, undefined, null) are constant space
+- Strings require O(n) space (where n is the string length)
+- Reference types are generally O(n), where n is the length (for arrays) or the number of keys (for objects)
