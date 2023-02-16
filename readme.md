@@ -18,3 +18,15 @@ Access - O(1)
 ```
 
 When you dont need any ordering, objects are an excellent choise
+
+### Arrays
+
+```
+Insertion - It depends
+Removal - It depends
+Searching - O(n)
+Access - O(1)
+```
+
+- When you need order
+- When you need fast access / insertion and removal cause some difficults
