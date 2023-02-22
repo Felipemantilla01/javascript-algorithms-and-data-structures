@@ -1,14 +1,16 @@
 function bubbleSort(arr) {
   let swapped = true;
+  let limit = arr.length - 1;
   while (swapped) {
     swapped = false;
-    for (let i = 0; i < arr.length - 1; i++) {
+    for (let i = 0; i < limit; i++) {
       if (arr[i] > arr[i + 1]) {
         // swap!!
         [arr[i], arr[i + 1]] = [arr[i + 1], arr[i]];
         swapped = true;
       }
     }
+    limit -= 1; // each time we put at end one number, so we dont need to go there in the loop
   }
   return arr;
 }
