@@ -47,3 +47,23 @@ function collectOdds(arr) {
 }
 
 console.log(collectOdds([1, 2, 3, 4, 5, 6, 7, 8, 9]));
+
+// collect odds using pure recursion
+// this mean without using nested functions or external objects to save the data
+// using nested function is straightforward
+
+function collectOdds(arr) {
+  let newArr = [];
+  if (arr.length === 0) {
+    return newArr;
+  }
+
+  if (arr[0] % 2 !== 0) {
+    newArr.push(arr[0]);
+  }
+
+  newArr = newArr.concat(collectOdds(arr.slice(1)));
+  return newArr
+}
+
+console.log(collectOdds([1, 2, 3, 4, 5, 6, 7, 8, 9]));
