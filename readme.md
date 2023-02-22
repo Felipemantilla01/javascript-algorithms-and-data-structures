@@ -20,3 +20,5 @@ All the search methods of JavaScript do linear search, and the Big O notation, o
 - Binary Search is much faster form of search 
 - Rather than eliminating one element at a time, you can eliminate half of the remaining elements at a time 
 - Binary search only works on `sorted` arrays 
+
+The Big O of Binary Search is O(log n)
