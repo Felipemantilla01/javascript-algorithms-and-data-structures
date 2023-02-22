@@ -11,3 +11,5 @@ Everything use recursion
 - Object traversal 
 - We will see it in more complex data structures 
 - It's sometimes a cleaner alternative to iteration
+
+remember ALWAYS implement the base case (when recursion would stop)
