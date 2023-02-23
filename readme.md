@@ -26,5 +26,10 @@ It consists on going moving the numbers to the left making the left side of the 
 | Insertion | O(n)                   | O(n^2)                    | O(n^2)                  | O(1)              |
 | Selection | O(n^2)                 | O(n^2)                    | O(n^2)                  | O(1)              |
 
+## Merging sort
 
-## Merging sort 
+It is consists on split the array in the smallest pieces [] or [x], then we need to merge each pair of those items using a method to merge sorted arrays.
+
+| time complexity (best) | time complexity (average) | time complexity (worst) | spaace complexity |
+| ---------------------- | ------------------------- | ----------------------- | ----------------- |
+| O(n log n)             | O(n log n)                | O(n log n)              | O(n)              |

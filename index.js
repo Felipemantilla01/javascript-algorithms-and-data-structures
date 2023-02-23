@@ -88,7 +88,17 @@ function mergeSortedArrays(arr1, arr2) {
   return array;
 }
 
-console.log(
-  "mergeSortedArrays",
-  mergeSortedArrays([1, 4, 5, 15, 25], [2, 3, 6, 12, 17, 24, 45])
-);
+// console.log(
+//   "mergeSortedArrays",
+//   mergeSortedArrays([1, 4, 5, 15, 25], [2, 3, 6, 12, 17, 24, 45])
+// );
+
+function mergeSort(array) {
+  if (array.length <= 1) return array;
+  let midpoint = Math.floor(array.length / 2);
+  let left = mergeSort(array.slice(0, midpoint));
+  let right = mergeSort(array.slice(midpoint));
+  return mergeSortedArrays(left, right);
+}
+
+console.log("mergeSort", mergeSort([1, 4, 5, 15, 25, 3, 2, 6, 24, 54, 34, 67]));
