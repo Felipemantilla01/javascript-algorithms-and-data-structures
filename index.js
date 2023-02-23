@@ -67,4 +67,28 @@ function insertionSort(array) {
   return array;
 }
 
-console.log("insertionSort", insertionSort([3, 2, 44, 38, 5, 1 ,65, 47, 15, 4]));
+// console.log("insertionSort", insertionSort([3, 2, 44, 38, 5, 1 ,65, 47, 15, 4]));
+
+function mergeSortedArrays(arr1, arr2) {
+  let array = [];
+  let pointer1 = 0,
+    pointer2 = 0;
+  let limit = arr1.length + arr2.length;
+  while (pointer1 + pointer2 < limit) {
+    let comparator1 = arr1[pointer1] ? arr1[pointer1] : Infinity;
+    let comparator2 = arr2[pointer2] ? arr2[pointer2] : Infinity;
+    if (comparator1 < comparator2) {
+      array.push(comparator1);
+      pointer1++;
+    } else {
+      array.push(comparator2);
+      pointer2++;
+    }
+  }
+  return array;
+}
+
+console.log(
+  "mergeSortedArrays",
+  mergeSortedArrays([1, 4, 5, 15, 25], [2, 3, 6, 12, 17, 24, 45])
+);

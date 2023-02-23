@@ -25,3 +25,6 @@ It consists on going moving the numbers to the left making the left side of the 
 | Bubble    | O(n)                   | O(n^2)                    | O(n^2)                  | O(1)              |
 | Insertion | O(n)                   | O(n^2)                    | O(n^2)                  | O(1)              |
 | Selection | O(n^2)                 | O(n^2)                    | O(n^2)                  | O(1)              |
+
+
+## Merging sort 
