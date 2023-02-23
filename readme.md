@@ -15,3 +15,13 @@ The bubble sort is based on comparisons on each position of the array and its ne
 ## Selection Sort
 
 Similar to Bubble sort, but insted of first placing large values into sorted position, it places small values into sorted position
+
+## Insertion sort
+
+It consists on going moving the numbers to the left making the left side of the array sorted,
+
+| Algorithm | time complexity (best) | time complexity (average) | time complexity (worst) | spaace complexity |
+| --------- | ---------------------- | ------------------------- | ----------------------- | ----------------- |
+| Bubble    | O(n)                   | O(n^2)                    | O(n^2)                  | O(1)              |
+| Insertion | O(n)                   | O(n^2)                    | O(n^2)                  | O(1)              |
+| Selection | O(n^2)                 | O(n^2)                    | O(n^2)                  | O(1)              |

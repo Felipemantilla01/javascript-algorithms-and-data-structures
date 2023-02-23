@@ -45,7 +45,26 @@ function selectionSort(array) {
   return array;
 }
 
-console.log(
-  "selectionSort",
-  selectionSort([5, 98, 1, 7, 5, 3, 32, 201, 6, 8, 12, 2, 56])
-);
+// console.log(
+//   "selectionSort",
+//   selectionSort([5, 98, 1, 7, 5, 3, 32, 201, 6, 8, 12, 2, 56])
+// );
+
+function insertionSort(array) {
+  let searchIndex = 1;
+  let end = array.length;
+  while (searchIndex < end) {
+    let tempIndex = searchIndex;
+    for (let index = tempIndex - 1; index >= 0; index--) {
+      if (array[tempIndex] < array[index]) {
+        // swap
+        [array[tempIndex], array[index]] = [array[index], array[tempIndex]];
+        tempIndex -= 1;
+      }
+    }
+    searchIndex += 1;
+  }
+  return array;
+}
+
+console.log("insertionSort", insertionSort([3, 2, 44, 38, 5, 1 ,65, 47, 15, 4]));
