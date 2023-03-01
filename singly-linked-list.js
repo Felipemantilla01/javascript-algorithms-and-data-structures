@@ -25,8 +25,35 @@ class SinglyLinkedList {
     this.length++;
     return this;
   }
+
+  pop() {
+    if (!this.tail) {
+      return null;
+    }
+    // traverse the list to find the new tail
+    let newTail = null;
+    let currentTail = this.head;
+    while (currentTail.next) {
+      newTail = currentTail;
+      currentTail = currentTail.next;
+    }
+    this.tail = newTail;
+    this.tail.next = null;
+    this.length--;
+    if (this.length === 0) {
+      this.head = null;
+      this.tail = null;
+    }
+    return currentTail;
+  }
 }
 
 const singlyLinkedList = new SinglyLinkedList();
-console.log(singlyLinkedList.push(45));
-console.log(singlyLinkedList.push(32));
+singlyLinkedList.push(45);
+console.log(singlyLinkedList);
+singlyLinkedList.push(32);
+console.log(singlyLinkedList);
+singlyLinkedList.push(31);
+console.log(singlyLinkedList);
+singlyLinkedList.pop();
+console.log(singlyLinkedList);
