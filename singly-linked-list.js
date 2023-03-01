@@ -46,6 +46,16 @@ class SinglyLinkedList {
     }
     return currentTail;
   }
+
+  shift() {
+    if (!this.head) {
+      return null;
+    }
+    let currentHead = this.head;
+    this.head = this.head.next;
+    this.length--;
+    return currentHead;
+  }
 }
 
 const singlyLinkedList = new SinglyLinkedList();
@@ -56,4 +66,6 @@ console.log(singlyLinkedList);
 singlyLinkedList.push(31);
 console.log(singlyLinkedList);
 singlyLinkedList.pop();
+console.log(singlyLinkedList);
+singlyLinkedList.shift();
 console.log(singlyLinkedList);
