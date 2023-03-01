@@ -92,6 +92,29 @@ class SinglyLinkedList {
     }
     return false;
   }
+
+  insert(index, val) {
+    // validations
+    if (index < 0 || index >= this.length) {
+      return null;
+    }
+
+    if (index === this.length) return !!this.push(val);
+
+    if (index === 0) return !!this.unshift(val);
+
+    // we need to found the node [index-1] and the node [index]
+    let nodeBeforeIndex = this.get(index - 1);
+    let nodeIndex = this.get(index);
+
+    let newNode = new Node(val);
+
+    nodeBeforeIndex.next = newNode;
+    newNode.next = nodeIndex;
+    this.length++;
+
+    return newNode;
+  }
 }
 
 const singlyLinkedList = new SinglyLinkedList();
@@ -112,3 +135,7 @@ console.log(singlyLinkedList.get(1));
 
 singlyLinkedList.set(1, "setting value");
 console.log(singlyLinkedList.get(1));
+
+console.log(singlyLinkedList);
+singlyLinkedList.insert(1, "123");
+console.log(singlyLinkedList);
