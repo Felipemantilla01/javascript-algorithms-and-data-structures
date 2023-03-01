@@ -62,9 +62,10 @@ class SinglyLinkedList {
     if (!this.head) {
       this.head = newNode;
       this.tail = this.head;
+    } else {
+      newNode.next = this.head;
+      this.head = newNode;
     }
-    newNode.next = this.head;
-    this.head = newNode;
     this.length++;
     return this;
   }
@@ -80,4 +81,6 @@ console.log(singlyLinkedList);
 singlyLinkedList.pop();
 console.log(singlyLinkedList);
 singlyLinkedList.shift();
+console.log(singlyLinkedList);
+singlyLinkedList.unshift("first");
 console.log(singlyLinkedList);
